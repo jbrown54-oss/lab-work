@@ -1,0 +1,23 @@
+# Patient data - never commit
+*.csv
+*.xlsx
+*.xls
+*.zip
+*.pdf
+files/
+Combined exports/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+
+# macOS
+.DS_Store
+
+# Editors
+.vscode/
+.idea/
+~$*

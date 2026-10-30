@@ -1,4 +1,5 @@
 import csv
+import os
 import re
 import sys
 
@@ -11,7 +12,11 @@ try:
 except ImportError:
     Workbook = None
 
-csv.field_size_limit(sys.maxsize)
+# Read and save files in the folder this script is in, whichever folder is open.
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
+
+# Allow very long cells. 2**31 - 1 is the largest limit that also works on Windows.
+csv.field_size_limit(2**31 - 1)
 
 
 def load(path):
